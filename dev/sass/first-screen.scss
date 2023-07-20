@@ -1,3 +1,43 @@
-h1 {
-    color: blue;
+
+.tab-list li {
+    background-color: var(--neomo)!important;
+    border-radius: 10px;
+}
+
+.current {
+    background-color: rgb(62, 230, 65)!important;
+}
+
+
+.build-1 {
+    display: flex;
+    flex-direction: row;
+    svg {
+        max-width: 1000px;
+        // min-width: 350px;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .info {
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 90px;
+        color: black!important;
+        .inset-neomo {
+            box-shadow: none!important;
+        }
+    }
+
+    .build {
+        stroke: rgba(82, 166, 34, 0.372);
+        fill: rgba(6, 52, 6, 0);
+        &:hover {
+            stroke: rgb(93, 0, 255);
+            stroke-width: 5px;
+            fill: rgba(133, 18, 215, 0.681);
+            cursor: pointer;
+        }
+    }
 }
