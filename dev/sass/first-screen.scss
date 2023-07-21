@@ -1,7 +1,13 @@
 
-.tab-list li {
-    background-color: var(--neomo)!important;
-    border-radius: 10px;
+// first build
+
+.tab-list {
+    display: flex;
+    justify-content: center;
+    li {
+        background-color: var(--neomo)!important;
+        border-radius: 10px;
+    }
 }
 
 .current {
@@ -9,14 +15,22 @@
 }
 
 
-.build-1 {
+.build-1,
+.build-2 {
     display: flex;
     flex-direction: row;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     svg {
         max-width: 1000px;
-        // min-width: 350px;
+        min-width: 350px;
         width: 100%;
-        border-radius: 20px;
+        // border: 3px solid;
+        // border-radius: 20px;
     }
 
     .info {
@@ -27,6 +41,18 @@
         color: black!important;
         .inset-neomo {
             box-shadow: none!important;
+        }
+
+        #build-value,
+        #stages-value,
+        #flats-value,
+        #floor-item,
+        #flats-all,
+        #flats-free,
+        #flats-action,
+        #flats-book,
+        #flats-sold {
+            color: blueviolet;
         }
     }
 
@@ -40,4 +66,40 @@
             cursor: pointer;
         }
     }
+}
+
+
+// second build
+
+.build-2 {
+    svg {
+        max-width: 800px;
+    }
+
+    .floor {
+        stroke: rgba(82, 166, 34, 0.372);
+        fill: rgba(6, 52, 6, 0);
+        &:hover {
+            stroke: rgb(66, 10, 79);
+            fill: rgba(108, 30, 186, 0.42);
+            stroke-width: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .avto {
+        stroke: rgba(82, 166, 34, 0.372);
+        fill: rgba(6, 52, 6, 0);
+        &:hover {
+            stroke: rgb(43, 6, 6);
+            stroke-width: 7px;
+            fill: rgba(197, 12, 12, 0.32);
+            cursor: pointer;
+        }
+    }
+
+}
+
+.floor {
+    @extend .build-1;
 }
